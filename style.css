@@ -1,0 +1,46 @@
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+body{
+
+}
+.hide{
+    display:none !important;
+}
+.w-50{
+    border-radius: 15px;
+}
+.w-25{
+    border-radius: 15px;
+}
+.verDinero{
+    background-color: antiquewhite;
+    padding: 25px;
+    border-radius: 15px;
+    margin-top: 25px;
+}
+
+.banckBob{
+
+    height: 200px !important;
+    width: 50% !important;
+    display: block;
+ margin: auto;
+border-radius: 15px ;
+
+}
+
+.me{
+    width: 200px !important;
+    height: 50px;
+    margin: auto;
+}
+.banckBobLogin{
+    border-radius: 13px ;
+}
+.retirobob{
+    width: 200px;
+    height: 200px;
+}
