@@ -28,6 +28,8 @@ let userSaldoIngreso = document.getElementById("userSaldoIngreso");
 let menuPrinIng= document.getElementById("menuPrinIng");
 let reglogin= document.getElementById("reglogin");
 let menumenu= document.getElementById("menumenu")
+let alertaretiro= document.getElementById("alertaretiro")
+let alertaingreso= document.getElementById("alertaingreso")
 
 
 var resultado;
@@ -68,8 +70,9 @@ function retirarDine(){
       cuentas.splice(cuentas[i],1,{nombre:element,saldo:resultado,pass:123 });
     }
     if(resultado < 10){
-console.log("No se puede hacer el retiro la cuenta no puede quedarse con menos de $10")
-setTimeout(()=>{location.reload()},2000)
+      alertaretiro.classList.remove("hide");
+      retirarVis.classList.add("hide")
+setTimeout(()=>{location.reload()},3000)
     }else{
       menRetiro.classList.remove("hide");
       menuPrin.classList.remove("hide");
@@ -100,13 +103,16 @@ console.log("No se puede hacer el deposito ya que la cuenta tiene el tope de sal
 setTimeout(()=>{location.reload()},2000)
     }else{
       resultado=parseInt(saldoDeRetiro) + parseInt(ingresaDinerCuneta.value);
-      cuentas.splice(cuentas[i],1,{nombre:element,saldo:resultado,pass:123 });
-      console.log(cuentas)
+     
 
     }if(resultado >= 991){
-      console.log("No se puede hacer el deposito  ya que su cuenta acumulara mas de 990")
-      setTimeout(()=>{location.reload()},2000)
+
+      ingresaDinero.classList.add("hide");
+      alertaingreso.classList.remove("hide")
+      setTimeout(()=>{location.reload()},4000)
           }else{
+            cuentas.splice(cuentas[i],1,{nombre:element,saldo:resultado,pass:123 });
+            console.log(cuentas)
             menIngreso.classList.remove("hide")
             menuPrinIng.classList.remove("hide");
             ingresaDinero.classList.add("hide");
