@@ -159,7 +159,7 @@ function visEstadoCuenta(){
       }
       
     }
-    dineCuenta.innerHTML += saldocuenta;
+   
     
 }
 
